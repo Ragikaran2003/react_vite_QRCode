@@ -43,8 +43,7 @@ export const Qrcode = () => {
             <input type="text" id="dataInput" value={qrData} onChange={(e)=>setQrData(e.target.value)} placeholder="Enter Data For QR Code"/>
             <label htmlFor="sixeInput" className="input-label">Image Size (e.g-150): </label>
             <input type="text" id="sixeInput" value={size} onChange={(e)=>setSize(e.target.value)} placeholder="Enter Image Size"/>
-            {size>250 && <p className="error">Invalid input Range</p>}
-            <button className="generate-button" disabled={loading || loading} onClick={generateQR}>Generate QR Code</button>
+            <button className="generate-button" disabled={loading} onClick={generateQR}>Generate QR Code</button>
             <button className="download-button" onClick={downloadQR}>Download QR Code</button>
         </div>
         <p className="footer">Designed By <a href="http://ragikaran2003.free.nf">Baskaran Ragikaran</a></p>
