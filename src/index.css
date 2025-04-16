@@ -25,14 +25,19 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Ensure vertical layout on mobile */
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
 button {
@@ -54,6 +59,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode overrides */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +70,28 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* 🔽 Mobile responsiveness starts here */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.95em;
+  }
+
+  body {
+    padding: 2rem 1rem;
+  }
+
+  a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
   }
 }
