@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Qrcode = () => {
+export const QrCode = () => {
   const [img , setImg] = useState("");
   const [loading , setLoading] = useState(false);
   const [qrData,setQrData] = useState("")
